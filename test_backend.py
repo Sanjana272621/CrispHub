@@ -75,7 +75,7 @@ async def test_repo_endpoint(session):
 
 async def test_stats_endpoint(session):
     """Test the user stats endpoint"""
-    print(f"\n🔍 Testing stats endpoint for {TEST_USERNAME}...")
+    print(f"\nTesting stats endpoint for {TEST_USERNAME}...")
     
     url = f"{API_BASE_URL}/stats/{TEST_USERNAME}"
     async with session.get(url) as response:
@@ -133,7 +133,7 @@ async def main():
             if user_test and repo_test and stats_test:
                 print("\nAll tests passed! Your backend is working correctly.")
             else:
-                print("\n⚠Some tests failed. Check the logs above for details.")
+                print("\nSome tests failed. Check the logs above for details.")
                 
     except aiohttp.ClientConnectorError:
         print("Error: Could not connect to the API. Make sure the server is running on http://localhost:8000")
